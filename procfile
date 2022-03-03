@@ -1,1 +1,1 @@
-web: gunicorn mythought.wsgi --log-file -
+web: gunicorn src.wsgi --log-file -
