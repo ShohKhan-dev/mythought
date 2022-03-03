@@ -1,0 +1,1 @@
+web: gunicorn mythought.wsgi --log-file -
