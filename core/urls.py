@@ -24,6 +24,8 @@ from mythought.forms import UserLoginForm
 from mythought.views import frontpage, signup, feed, search, userprofile, follow_user, unfollow_user, followers, follows, edit_profile, conversations, conversation, notifications
 from mythought.api import api_add_post, api_add_like, api_add_message
 
+from django.views.static import serve
+from django.conf.urls import url
 
 urlpatterns = [
 
@@ -59,5 +61,9 @@ urlpatterns = [
 
     # ADMIN
     path('admin/', admin.site.urls),
+
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
