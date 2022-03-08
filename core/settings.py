@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*!ok$z^oevw)cs&gu3kd3v650db5b0owe)!6db#t-5=a$i_iep'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'mythoughtstest.herokuapp.com']
+ALLOWED_HOSTS = ['http://127.0.0.1:8000', 'mythoughtstest.herokuapp.com']
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'feed'
